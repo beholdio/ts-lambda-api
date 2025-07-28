@@ -1,16 +1,12 @@
-[![npm](https://img.shields.io/npm/v/ts-lambda-api.svg?style=flat-square)](https://www.npmjs.com/package/ts-lambda-api) [![downloads](https://img.shields.io/npm/dw/ts-lambda-api.svg?style=flat-square)](https://travis-ci.com/djfdyuruiry/ts-lambda-api)
-
-[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/djfdyuruiry/ts-lambda-api/build.yml)](https://github.com/djfdyuruiry/ts-lambda-api/actions/workflows/build.yml) [![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/djfdyuruiry/ts-lambda-api)](https://libraries.io/npm/ts-lambda-api)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/beholdio/ts-lambda-api/build.yml)](https://github.com/beholdio/ts-lambda-api/actions/workflows/build.yml) [![Dependency Status](https://img.shields.io/librariesio/github/beholdio/ts-lambda-api)](https://libraries.io/github/beholdio/ts-lambda-api)
 
 # ts-lambda-api
 
 Build REST API's using Typescript & AWS Lambda.
 
-[GitHub Repo](https://github.com/djfdyuruiry/ts-lambda-api/)
+[GitHub Repo](https://github.com/beholdio/ts-lambda-api/)
 
-[![NPM](https://nodei.co/npm/ts-lambda-api.png)](https://nodei.co/npm/ts-lambda-api/)
-
-Read the full `typedoc` documentation: https://djfdyuruiry.github.io/ts-lambda-api/
+Read the full `typedoc` documentation: https://beholdio.github.io/ts-lambda-api/
 
 Framework Features:
 
@@ -34,50 +30,54 @@ This project is built on top of the wonderful [lambda-api](https://github.com/je
 
 **Docs**
 
-- [Routing](#routing)
+- [ts-lambda-api](#ts-lambda-api)
+  - [Creating a new API](#creating-a-new-api)
+  - [Deploy to AWS Lambda](#deploy-to-aws-lambda)
+    - [Invoke Lambda](#invoke-lambda)
+  - [Routing](#routing)
     - [Controller Routes](#controller-routes)
     - [Endpoint Routes](#endpoint-routes)
-    - [Path Parameters](#path-params)
-    - [Manually Loading Controllers](#loading-controllers)
-- [Request Parameter Binding](#request-binding)
-- [Responses](#responses)
-- [Authentication & Authorization](#auth-authorization)
-    - [Authentication and Principals](#auth-princ)
-    - [Basic Authentication](#basic-auth)
-    - [Access Principal Context](#endpoint-princip)
-    - [Unauthenticated Endpoints](#no-auth-endpoints)
-    - [Custom Authentication](#custom-auth)
+    - [Path Parameters](#path-parameters)
+    - [Manually Loading Controllers](#manually-loading-controllers)
+  - [Request Parameter Binding](#request-parameter-binding)
+  - [Responses](#responses)
+  - [Authentication \& Authorization](#authentication--authorization)
+    - [Authentication and Principals](#authentication-and-principals)
+    - [Basic Authentication](#basic-authentication)
+    - [Access Principal Context](#access-principal-context)
+    - [Unauthenticated Endpoints](#unauthenticated-endpoints)
+    - [Custom Authentication](#custom-authentication)
     - [Authorization](#authorization)
-- [Error Handling](#errors)
+  - [Error Handling](#error-handling)
     - [Error Interceptors](#error-interceptors)
     - [Manual Error Interceptors](#manual-error-interceptors)
     - [Catching Errors](#catching-errors)
-    - [Framework Error Handling](#framework-errors)
-- [JSON Patch Requests](#json-patch)
-- [Request / Response Context](#req-res-context)
-    - [Extending Controller Class](#extend-controller)
-    - [Using Decorators](#use-decorators)
-    - [Returning Files in a Response](#send-files)
-- [Dependency Injection](#di)
-- [Configuration](#config)
-    - [lambda-api](#lambda-api-config)
-    - [Reference](#config-reference)
-- [Logging](#logging)
-    - [Writing Logs](#logging-writing)
-    - [API](#logging-api)
-    - [lambda-api](#lambda-api-logging)
-- [OpenAPI (Swagger)](#open-api)
-    - [Decorators](#open-api-decorators)
-    - [YAML Support](#open-api-yaml)
-    - [Authentication](#open-api-auth)
-- [Testing](#testing)
-- [Development](#dev)
+    - [Framework Error Handling](#framework-error-handling)
+  - [JSON Patch Requests](#json-patch-requests)
+  - [Request / Response Context](#request--response-context)
+    - [Extending Controller Class](#extending-controller-class)
+    - [Using Decorators](#using-decorators)
+    - [Returning Files in a Response](#returning-files-in-a-response)
+  - [ Dependency Injection](#-dependency-injection)
+  - [Configuration](#configuration)
+    - [Reference](#reference)
+    - [lambda-api](#lambda-api)
+  - [Logging](#logging)
+    - [Writing Logs](#writing-logs)
+    - [ Server Logger API](#-server-logger-api)
+    - [lambda-api](#lambda-api-1)
+  - [OpenAPI (Swagger)](#openapi-swagger)
+    - [Decorators](#decorators)
+    - [YAML Support](#yaml-support)
+    - [Authentication](#authentication)
+  - [Testing](#testing)
+  - [Development](#development)
 
 ## <a id="create-api"></a>Creating a new API
 
 This is a short guide to creating your first API using `ts-lambda-api`. It is somewhat opinionated about project structure, but most of this can be easily customized.
 
-**Note: Node.js v18.x & Typescript v5.x are recommended. Other versions may work perfectly fine, but have not been tested.**
+**Note: Node.js v22.x & Typescript v5.x are recommended. Other versions may work perfectly fine, but have not been tested.**
 
 - Create a directory for your project and run `npm init` to create your `package.json`
 
@@ -1072,7 +1072,7 @@ export class MyController {
 
 ### <a id="config-reference"></a>Reference
 
-For a complete reference see the [AppConfig](https://djfdyuruiry.github.io/ts-lambda-api/classes/appconfig.html) docs.
+For a complete reference see the [AppConfig](https://beholdio.github.io/ts-lambda-api/classes/appconfig.html) docs.
 
 ### <a id="lambda-api-config"></a>lambda-api
 
