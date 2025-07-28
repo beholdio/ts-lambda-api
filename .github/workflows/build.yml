@@ -58,7 +58,7 @@ jobs:
           path: dist
 
       - name: Create tarball
-        run: tar -czvf release-${{ github.ref_name }}.tar.gz dist
+        run: tar -czvf release-${{ github.ref_name }}.tar.gz -C dist .
 
       - name: Create release
         uses: ncipollo/release-action@v1
