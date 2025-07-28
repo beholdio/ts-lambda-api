@@ -1,4 +1,4 @@
-name: Build & Test
+name: Build, test and release
 
 on:
   pull_request:
@@ -6,28 +6,58 @@ on:
     branches:
       - develop
       - master
+    tags:
+      - "v*.*.*"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
           # Shallow clones should be disabled for a better relevancy of analysis
           fetch-depth: 0
 
-      - name: Install Node.JS Version
-        shell: bash -l -eo pipefail {0}
-        run: nvm install
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Test
-        shell: bash -l -eo pipefail {0}
-        run: nvm use && yarn test
+        run: yarn test
 
-      - name: SonarQube Scan
+      - name: SonarQube scan
         # This step only runs on pushes to the 'develop' branch
         if: github.ref == 'refs/heads/develop'
-        uses: SonarSource/sonarqube-scan-action@v5
+        uses: SonarSource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+  release:
+    name: Create GitHub release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-artifact
+          path: dist
+
+      - name: Create tarball
+        run: tar -czvf release-${{ github.ref_name }}.tar.gz dist
+        
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "release-*.tar.gz"
+          generateReleaseNotes: true
+          makeLatest: true
+          tag: ${{ github.ref_name }}
