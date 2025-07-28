@@ -6,8 +6,6 @@ Build REST API's using Typescript & AWS Lambda.
 
 [GitHub Repo](https://github.com/beholdio/ts-lambda-api/)
 
-[![NPM](https://nodei.co/npm/ts-lambda-api.png)](https://nodei.co/npm/ts-lambda-api/)
-
 Read the full `typedoc` documentation: https://beholdio.github.io/ts-lambda-api/
 
 Framework Features:
