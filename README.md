@@ -1,16 +1,14 @@
-[![npm](https://img.shields.io/npm/v/ts-lambda-api.svg?style=flat-square)](https://www.npmjs.com/package/ts-lambda-api) [![downloads](https://img.shields.io/npm/dw/ts-lambda-api.svg?style=flat-square)](https://travis-ci.com/djfdyuruiry/ts-lambda-api)
-
-[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/djfdyuruiry/ts-lambda-api/build.yml)](https://github.com/djfdyuruiry/ts-lambda-api/actions/workflows/build.yml) [![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/djfdyuruiry/ts-lambda-api)](https://libraries.io/npm/ts-lambda-api)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/beholdio/ts-lambda-api/build.yml)](https://github.com/beholdio/ts-lambda-api/actions/workflows/build.yml) [![Dependency Status](https://img.shields.io/librariesio/github/beholdio/ts-lambda-api)](https://libraries.io/github/beholdio/ts-lambda-api)
 
 # ts-lambda-api
 
 Build REST API's using Typescript & AWS Lambda.
 
-[GitHub Repo](https://github.com/djfdyuruiry/ts-lambda-api/)
+[GitHub Repo](https://github.com/beholdio/ts-lambda-api/)
 
 [![NPM](https://nodei.co/npm/ts-lambda-api.png)](https://nodei.co/npm/ts-lambda-api/)
 
-Read the full `typedoc` documentation: https://djfdyuruiry.github.io/ts-lambda-api/
+Read the full `typedoc` documentation: https://beholdio.github.io/ts-lambda-api/
 
 Framework Features:
 
@@ -1076,7 +1074,7 @@ export class MyController {
 
 ### <a id="config-reference"></a>Reference
 
-For a complete reference see the [AppConfig](https://djfdyuruiry.github.io/ts-lambda-api/classes/appconfig.html) docs.
+For a complete reference see the [AppConfig](https://beholdio.github.io/ts-lambda-api/classes/appconfig.html) docs.
 
 ### <a id="lambda-api-config"></a>lambda-api
 
