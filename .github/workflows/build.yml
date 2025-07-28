@@ -11,7 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with:
+          # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
 
       - name: Install Node.JS Version
         shell: bash -l -eo pipefail {0}
@@ -20,3 +23,11 @@ jobs:
       - name: Test
         shell: bash -l -eo pipefail {0}
         run: nvm use && yarn test
+
+      - name: SonarQube Scan
+        # This step only runs on pushes to the 'develop' branch
+        if: github.ref == 'refs/heads/develop'
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
