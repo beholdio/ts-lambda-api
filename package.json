@@ -42,7 +42,7 @@
     "@types/aws-lambda": "^8.10.98",
     "fast-json-patch": "^3.1.1",
     "inversify": "^6.0.1",
-    "lambda-api": "^1.0.2",
+    "lambda-api": "^1.2.0",
     "marky": "^1.2.4",
     "openapi3-ts": "^4.1.2",
     "reflect-metadata": "^0.1.13",
