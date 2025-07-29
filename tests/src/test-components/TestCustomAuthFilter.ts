@@ -31,7 +31,7 @@ export class TestCustomAuthFilter implements IAuthFilter<string, TestUser> {
             authHeader && (authHeader.length > 7) &&
             authHeader.toLowerCase().startsWith("bearer ")
         ) {
-            return authHeader.substr(6)
+            return authHeader.slice(6)
         }
     }
 
