@@ -6,8 +6,6 @@ on:
     branches:
       - develop
       - master
-    tags:
-      - "v*.*.*"
 
 jobs:
   build:
@@ -58,7 +56,7 @@ jobs:
           path: dist
 
       - name: Create tarball
-        run: tar -czvf release-${{ github.ref_name }}.tar.gz dist
+        run: tar -czvf release-${{ github.ref_name }}.tar.gz -C dist .
 
       - name: Create release
         uses: ncipollo/release-action@v1
@@ -91,6 +89,6 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Publish to GPR
-        run: yarn publish
+        run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

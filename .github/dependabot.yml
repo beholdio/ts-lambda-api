@@ -6,4 +6,15 @@ updates:
       interval: "daily"
     target-branch: "develop"
     labels:
-      - "npm dependencies"
+      - "dependencies"
+      - "yarn"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
+    labels:
+      - "dependencies"
+      - "python"
+      - "pip"
