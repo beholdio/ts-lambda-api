@@ -1378,10 +1378,10 @@
   resolved "https://registry.yarnpkg.com/@types/sprintf-js/-/sprintf-js-1.1.4.tgz#d27022638127111a79aab777d4d9292d1a11519a"
   integrity sha512-aWK1reDYWxcjgcIIPmQi3u+OQDuYa9b+lr6eIsGWrekJ9vr1NSjr4Eab8oQ1iKuH1ltFHpXGyerAv1a3FMKxzQ==
 
-"@types/temp@^0.9.0":
-  version "0.9.1"
-  resolved "https://registry.npmjs.org/@types/temp/-/temp-0.9.1.tgz"
-  integrity sha512-yDQ8Y+oQi9V7VkexwE6NBSVyNuyNFeGI275yWXASc2DjmxNicMi9O50KxDpNlST1kBbV9jKYBHGXhgNYFMPqtA==
+"@types/temp@^0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@types/temp/-/temp-0.9.4.tgz#69bd4b0e8fc4d54db06bd1b613c19292d333350b"
+  integrity sha512-+VfWIwrlept2VBTj7Y2wQnI/Xfscy1u8Pyj/puYwss6V1IblXn1x7S0S9eFh6KyBolgLCm+rUFzhFAbdkR691g==
   dependencies:
     "@types/node" "*"
 
