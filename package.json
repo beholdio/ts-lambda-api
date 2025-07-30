@@ -1,7 +1,7 @@
 {
   "name": "@beholdio/ts-lambda-api",
   "description": "Build REST API's using Typescript & AWS Lambda. Support for decorator based routing and dependency injection using InversifyJS. This project is built on top of the wonderful lambda-api package.",
-  "version": "2.4.7",
+  "version": "2.4.8",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beholdio/ts-lambda-api.git"
@@ -67,7 +67,7 @@
     "js-yaml": "^4.1.0",
     "junit-bark": "^1.3.1",
     "md5-file": "^5.0.0",
-    "nyc": "^15.1.0",
+    "nyc": "^17.1.0",
     "tap-spec": "^5.0.0",
     "temp": "^0.9.4",
     "typedoc": "^0.28.8",
