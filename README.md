@@ -1,10 +1,14 @@
-[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/beholdio/ts-lambda-api/build.yml)](https://github.com/beholdio/ts-lambda-api/actions/workflows/build.yml) [![Dependency Status](https://img.shields.io/librariesio/github/beholdio/ts-lambda-api)](https://libraries.io/github/beholdio/ts-lambda-api)
+[![npm](https://img.shields.io/npm/v/@beholdio/ts-lambda-api.svg?style=flat-square)](https://www.npmjs.com/package/@beholdio/ts-lambda-api) [![downloads](https://img.shields.io/npm/dw/@beholdio/ts-lambda-api.svg?style=flat-square)](https://www.npmjs.com/package/@beholdio/ts-lambda-api)
+
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/beholdio/ts-lambda-api/build.yml)](https://github.com/beholdio/ts-lambda-api/actions/workflows/build.yml) [![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/beholdio/ts-lambda-api)](https://libraries.io/npm/@beholdio%2Fts-lambda-api)
 
 # ts-lambda-api
 
 Build REST API's using Typescript & AWS Lambda.
 
 [GitHub Repo](https://github.com/beholdio/ts-lambda-api/)
+
+[![NPM](https://nodei.co/npm/@beholdio%2Fts-lambda-api.png)](https://nodei.co/npm/@beholdio%2Fts-lambda-api/)
 
 Read the full `typedoc` documentation: https://beholdio.github.io/ts-lambda-api/
 
@@ -84,7 +88,7 @@ This is a short guide to creating your first API using `ts-lambda-api`. It is so
 - Install required packages:
 
 ```shell
-npm install ts-lambda-api
+npm install @beholdio/ts-lambda-api
 npm install -D typescript @types/node @aws-sdk/client-s3 @aws-sdk/s3-request-presigner
 ```
 
