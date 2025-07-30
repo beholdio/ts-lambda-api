@@ -4,7 +4,7 @@
   "version": "2.4.5",
   "repository": {
     "type": "git",
-    "url": "https://github.com/beholdio/ts-lambda-api.git"
+    "url": "git+https://github.com/beholdio/ts-lambda-api.git"
   },
   "scripts": {
     "build": "yarn lint && rm -rf dist && tsc && yarn docs",
@@ -76,5 +76,13 @@
   "resolutions": {
     "trim": "^1.0.1",
     "semver": "^7.5.2"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "bugs": {
+    "url": "https://github.com/beholdio/ts-lambda-api/issues"
+  },
+  "homepage": "https://github.com/beholdio/ts-lambda-api#readme"
 }
