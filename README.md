@@ -1572,7 +1572,7 @@ const app = new ApiLambdaApp(controllersPath, appConfig)
 ## <a id="testing"></a>Testing
 
 
-For local dev testing and integration with acceptance tests see the [ts-lambda-api-local](https://www.npmjs.com/package/ts-lambda-api-local) package which enables hosting your API using express as a local HTTP server.
+For local dev testing and integration with acceptance tests see the [@beholdio/ts-lambda-api-local](https://www.npmjs.com/package/@beholdio/ts-lambda-api-local) package which enables hosting your API using express as a local HTTP server.
 
 Check out this project's dev dependencies to see what is required to test API code. The `tests` directory of this repo contains extensive acceptance tests which will show you how to build mock requests and invoke your API endpoints programmatically.
 
