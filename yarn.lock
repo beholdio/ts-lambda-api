@@ -1488,9 +1488,9 @@
     tslib "^2.6.2"
 
 "@types/aws-lambda@^8.10.98":
-  version "8.10.119"
-  resolved "https://registry.npmjs.org/@types/aws-lambda/-/aws-lambda-8.10.119.tgz"
-  integrity sha512-Vqm22aZrCvCd6I5g1SvpW151jfqwTzEZ7XJ3yZ6xaZG31nUEOEyzzVImjRcsN8Wi/QyPxId/x8GTtgIbsy8kEw==
+  version "8.10.152"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.152.tgz#f68424a8175f0a54a2a941e65b76c3f51f3bd89d"
+  integrity sha512-soT/c2gYBnT5ygwiHPmd9a1bftj462NWVk2tKCc1PYHSIacB2UwbTS2zYG4jzag1mRDuzg/OjtxQjQ2NKRB6Rw==
 
 "@types/hast@^3.0.4":
   version "3.0.4"
